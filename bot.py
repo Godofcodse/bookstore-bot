@@ -4,7 +4,7 @@ import requests
 import random
 from config import BOT_TOKEN, ADMIN_ID, PAYMENT_CARD
 
-bot = telebot.TeleBot(API_TOKEN)
+bot = telebot.TeleBot(BOT_TOKEN)
 
 
 # user_data  stores: cart, order temp info, current state

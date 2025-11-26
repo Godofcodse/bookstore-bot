@@ -1,6 +1,7 @@
 from config import DB_CONFIG
 import mysql.connector
 
+
 def get_db_connection():
     """ایجاد اتصال به دیتابیس MySQL"""
     try:
