@@ -2,8 +2,14 @@ from .connection import get_db_connection
 from .DDL import create_tables
 from .DML import (
     save_user,
-    save_user_login,  # NEW: Added for login tracking
     save_book,
+    add_book_full,  
+    update_book,    
+    delete_book,    
+    add_category,   
+    delete_category, 
+    add_admin,      
+    remove_admin,   
     create_order,
     add_order_item,
     update_order_status,
@@ -14,22 +20,32 @@ from .DML import (
 from .DQL import (
     get_user,
     get_book,
+    get_all_categories,     
+    get_category_by_id,     
+    get_books_by_category,  
+    get_all_books,          
+    search_books,           
+    is_admin,               
+    get_all_admins,         
     get_pending_orders,
     get_order_items,
     get_user_orders,
     get_user_cart,
     get_cart_total,
-    get_user_stats,  # NEW: Added for login tracking
-    get_all_users_stats,  # NEW: Added for login tracking
-    get_daily_starts,  # NEW: Added for login tracking
 )
 
 __all__ = [
     "get_db_connection",
     "create_tables",
     "save_user",
-    "save_user_login",  # NEW: Added for login tracking
     "save_book",
+    "add_book_full",     
+    "update_book",       
+    "delete_book",       
+    "add_category",      
+    "delete_category",   
+    "add_admin",         
+    "remove_admin",      
     "create_order",
     "add_order_item",
     "update_order_status",
@@ -38,12 +54,16 @@ __all__ = [
     "clear_user_cart",
     "get_user",
     "get_book",
+    "get_all_categories",    
+    "get_category_by_id",    
+    "get_books_by_category", 
+    "get_all_books",         
+    "search_books",         
+    "is_admin",              
+    "get_all_admins",       
     "get_pending_orders",
     "get_order_items",
     "get_user_orders",
     "get_user_cart",
     "get_cart_total",
-    "get_user_stats",  # NEW: Added for login tracking
-    "get_all_users_stats",  # NEW: Added for login tracking
-    "get_daily_starts",  # NEW: Added for login tracking
 ]
